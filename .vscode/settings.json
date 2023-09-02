@@ -106,7 +106,7 @@
 		"width",
 		"zIndex"
 	],
-	"cSpell.words": ["Pomodoro", "skeletonlabs", "tailwindcss"],
+	"cSpell.words": ["Pomodoro", "skeletonlabs", "tailwindcss", "unplugin"],
 	"files.associations": {
 		"\"*.css\"": "\"tailwindcss\""
 	},
@@ -116,5 +116,6 @@
 	"tailwindCSS.includeLanguages": {
 		"plaintext": "html"
 	},
-	"tailwindCSS.emmetCompletions": true
+	"tailwindCSS.emmetCompletions": true,
+	"editor.defaultFormatter": null
 }
