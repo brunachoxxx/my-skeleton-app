@@ -37,16 +37,16 @@
 	const handleArrowClick = (command: string) => {
 		switch (command) {
 			case 'upW':
-				workTime += 1;
+				workTime += 60;
 				break;
 			case 'downW':
-				workTime -= 1;
+				workTime -= 60;
 				break;
 			case 'upR':
-				restTime += 1;
+				restTime += 60;
 				break;
 			case 'downR':
-				restTime -= 1;
+				restTime -= 60;
 				break;
 			default:
 				totalCount = totalCount;
@@ -66,14 +66,14 @@
 			<button type="button" class="btn variant-filled" on:click={() => handleArrowClick('downW')}>
 				<IcBaselineArrowDownward />
 			</button>
-			<h1 class="basis-1/4">{workTime}</h1>
+			<h1 class="basis-1/4">{workTime / 60}</h1>
 			<button type="button" class="btn variant-filled" on:click={() => handleArrowClick('upW')}>
 				<IcBaselineArrowUpward />
 			</button>
 			<button type="button" class="btn variant-filled" on:click={() => handleArrowClick('downR')}>
 				<IcBaselineArrowDownward />
 			</button>
-			<h1 class="basis-1/4">{restTime}</h1>
+			<h1 class="basis-1/4">{restTime / 60}</h1>
 			<button type="button" class="btn variant-filled" on:click={() => handleArrowClick('upR')}>
 				<IcBaselineArrowUpward />
 			</button>
