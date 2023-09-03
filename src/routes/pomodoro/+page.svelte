@@ -28,8 +28,29 @@
 	$: wSecs = totalCount % 60;
 
 	const handleReset = () => {
+		workTime = 1500;
+		restTime = 300;
 		totalCount = 1800;
 		play = false;
+	};
+
+	const handleArrowClick = (command: string) => {
+		switch (command) {
+			case 'upW':
+				workTime += 1;
+				break;
+			case 'downW':
+				workTime -= 1;
+				break;
+			case 'upR':
+				restTime += 1;
+				break;
+			case 'downR':
+				restTime -= 1;
+				break;
+			default:
+				totalCount = totalCount;
+		}
 	};
 
 	const padTo2Digits = (num: number) => {
@@ -41,11 +62,22 @@
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center flex flex-col items-center">
-		<div id="mins" class="flex flex-row space-x-2">
-			<IcBaselineArrowDownward />
+		<div id="mins" class="flex flex-row space-x-5">
+			<button type="button" class="btn variant-filled" on:click={() => handleArrowClick('downW')}>
+				<IcBaselineArrowDownward />
+			</button>
 			<h1 class="basis-1/4">{workTime}</h1>
-			<IcBaselineArrowUpward />
+			<button type="button" class="btn variant-filled" on:click={() => handleArrowClick('upW')}>
+				<IcBaselineArrowUpward />
+			</button>
+			<button type="button" class="btn variant-filled" on:click={() => handleArrowClick('downR')}>
+				<IcBaselineArrowDownward />
+			</button>
 			<h1 class="basis-1/4">{restTime}</h1>
+			<button type="button" class="btn variant-filled" on:click={() => handleArrowClick('upR')}>
+				<IcBaselineArrowUpward />
+			</button>
+
 			<h1 class="basis-1/4">{totalCount}</h1>
 		</div>
 		<h1 class="h1">
