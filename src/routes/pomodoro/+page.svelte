@@ -62,19 +62,19 @@
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center flex flex-col items-center">
-		<div id="mins" class="flex flex-row space-x-5">
-			<button type="button" class="btn variant-filled" on:click={() => handleArrowClick('downW')}>
+		<div id="controls" class="flex flex-row space-x-5">
+			<button type="button" class="btn variant-filled-secondary" on:click={() => handleArrowClick('downW')}>
 				<IcBaselineArrowDownward />
 			</button>
-			<h1 class="basis-1/4">{workTime / 60}</h1>
-			<button type="button" class="btn variant-filled" on:click={() => handleArrowClick('upW')}>
+			<h1 class=" h1 basis-1/4">{workTime / 60}</h1>
+			<button type="button" class="btn variant-filled-secondary" on:click={() => handleArrowClick('upW')}>
 				<IcBaselineArrowUpward />
 			</button>
-			<button type="button" class="btn variant-filled" on:click={() => handleArrowClick('downR')}>
+			<button type="button" class="btn variant-filled-secondary" on:click={() => handleArrowClick('downR')}>
 				<IcBaselineArrowDownward />
 			</button>
-			<h1 class="basis-1/4">{restTime / 60}</h1>
-			<button type="button" class="btn variant-filled" on:click={() => handleArrowClick('upR')}>
+			<h1 class=" h1 basis-1/4">{restTime / 60}</h1>
+			<button type="button" class="btn variant-filled-secondary" on:click={() => handleArrowClick('upR')}>
 				<IcBaselineArrowUpward />
 			</button>
 
